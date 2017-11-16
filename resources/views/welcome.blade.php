@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.foodo')
 @section('content')
     <h1>Home Page</h1>
     <p><a href="{{route('login')}}">Login</a></p>

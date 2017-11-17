@@ -6824,3 +6824,92 @@ a.thumbnail image {
   clear: both;
 }
 
+.sidebar {
+  background-color: #007688;
+  width: 15rem;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 0.9375rem;
+  color: #FFF;
+}
+
+.sidebar a:-webkit-any-link {
+  color: #FFF;
+}
+
+.sidebar a:-moz-any-link {
+  color: #FFF;
+}
+
+.sidebar a:any-link {
+  color: #FFF;
+}
+
+.page-content-left-buffer {
+  width: 15rem;
+  float: left;
+  height: 100%;
+}
+
+.top__bar {
+  background-color: #007688;
+  width: calc(100% - 15rem);
+  position: fixed;
+  top: 0;
+  left: 15rem;
+  height: 1.875rem;
+}
+
+.top__bar h1 {
+  font-size: 16pt;
+  text-align: center;
+  color: #FFF;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.page-content-top-buffer {
+  height: 1.875rem;
+  width: calc(100% - 15rem);
+}
+
+.page-content {
+  float: right;
+  width: calc(100% - 15rem);
+}
+
+.background__div {
+  background-color: #19323C;
+  top: 1.875rem;
+  left: 15rem;
+  height: calc(100vh - 1.875rem);
+}
+
+label {
+  color: white;
+}
+
+input[type="text"],
+input[type="password"] {
+  background: rgba(0, 0, 0, 0.1);
+  color: white;
+  border: 0;
+  outline: 0;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: 0;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px dashed white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+h1 {
+  color: #fff;
+}
+

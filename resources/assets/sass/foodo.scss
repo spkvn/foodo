@@ -6,3 +6,6 @@
 
 //Include all for flex grid, so false.
 @include foundation-everything(false);
+
+@import "components/nav";
+@import "components/loginRegistration";

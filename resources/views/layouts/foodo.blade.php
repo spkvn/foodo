@@ -22,8 +22,18 @@
     <link href="{{ asset('css/foodo.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="app">
+    <div class="sidebar">
         @include('layouts.nav')
+    </div>
+    <div class="page-content-left-buffer">
+
+    </div>
+    <div class="top__bar">
+        <h1>FOODO</h1>
+    </div>
+    <div class="page-content-top-buffer">
+    </div>
+    <div class="page-content">
         @yield('content')
     </div>
 </body>

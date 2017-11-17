@@ -1,12 +1,11 @@
 @extends('layouts.foodo')
 
 @section('content')
-<div class="background__div">
     <div class="row">
         <div class="columns small-6 small-centered">
             <h1>Log In</h1>
-            {!! Form::open(['url' => route('login'), 'method' => 'post']) !!}
             <fieldset>
+            {!! Form::open(['url' => route('login'), 'method' => 'post']) !!}
             {!! Form::label('email','Email:') !!}
             {!! Form::text('email', old('email'),['placeholder'=>'example@email.com']) !!}
             {!! Form::label('password', 'Password:') !!}
@@ -22,5 +21,4 @@
             </a>
         </div>
     </div>
-</div>
 @endsection

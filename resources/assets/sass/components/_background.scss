@@ -1,0 +1,11 @@
+.background__div
+{
+  background-color:#19323C;
+  top:0 + $topbar-height;
+  left: 0 + $sidebar-width;
+  height: calc(100vh - #{$topbar-height});
+  *
+  {
+    color:white;
+  }
+}

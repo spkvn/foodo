@@ -34,7 +34,9 @@
     <div class="page-content-top-buffer">
     </div>
     <div class="page-content">
-        @yield('content')
+        <div class="background__div">
+            @yield('content')
+        </div>
     </div>
 </body>
 </html>

@@ -6889,6 +6889,7 @@ li {
   top: 1.875rem;
   left: 15rem;
   height: calc(100vh - 1.875rem);
+  z-index: -1;
 }
 
 .background__div * {
@@ -6912,5 +6913,19 @@ input[type="email"]:focus {
   border-bottom: 1px solid white;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.user__div {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #305f72;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 

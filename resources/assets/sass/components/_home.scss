@@ -1,0 +1,8 @@
+.user__div
+{
+  height:20%;
+  display:flex;
+  background-color: lighten($background-color, 15%);
+  align-items:flex-end;
+  justify-content: flex-end;
+}

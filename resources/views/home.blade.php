@@ -1,23 +1,29 @@
 @extends('layouts.foodo')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
+<div class="row">
+    <div class="medium-4">
+        <h1>{{auth()->user()->username}}</h1>
+        <p> 0 Recipes</p>
+        <p> Avg recipe rating</p>
+    </div>
+    <div class="medium-4">
+        <h2>Recipe name</h2>
+        <p>Recipe description</p>
+        <p>rating goes here</p>
+    </div>
+    <div class="medium-4">
+        <ul>
+            <li>
+                x rated ur recipe as 'sick'
+            </li>
+            <li>
+                x rated ur recipe as 'nasty (good)'
+            </li>
+            <li>
+                x rated ur recipe as 'lame'
+            </li>
+        </ul>
     </div>
 </div>
 @endsection

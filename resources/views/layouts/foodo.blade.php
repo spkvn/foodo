@@ -35,8 +35,8 @@
     </div>
     <div class="page-content">
         <div class="background__div">
-            @yield('content')
         </div>
+        @yield('content')
     </div>
 </body>
 </html>

@@ -22,21 +22,28 @@
     <link href="{{ asset('css/foodo.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="sidebar">
+    <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
         @include('layouts.nav')
     </div>
-    <div class="page-content-left-buffer">
-
-    </div>
-    <div class="top__bar">
-        <h1>FOODO</h1>
-    </div>
-    <div class="page-content-top-buffer">
-    </div>
-    <div class="page-content">
-        <div class="background__div">
-        </div>
+    <div class="off-canvas-content" data-off-canvas-content>
+        @include('layouts.topbar')
         @yield('content')
     </div>
+    {{--<div class="sidebar">--}}
+        {{--@include('layouts.nav')--}}
+    {{--</div>--}}
+    {{--<div class="page-content-left-buffer">--}}
+
+    {{--</div>--}}
+    {{--<div class="top__bar">--}}
+        {{--<h1>FOODO</h1>--}}
+    {{--</div>--}}
+    {{--<div class="page-content-top-buffer">--}}
+    {{--</div>--}}
+    {{--<div class="page-content">--}}
+        {{--<div class="background__div">--}}
+        {{--</div>--}}
+        {{--@yield('content')--}}
+    {{--</div>--}}
 </body>
 </html>

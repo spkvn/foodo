@@ -1,6 +1,12 @@
 <ul class="menu vertical">
-    <li><a href="#">One</a></li>
-    <li><a href="#">Two</a></li>
-    <li><a href="#">Three</a></li>
-    <li><a href="#">Four</a></li>
+    <li><a href="{{route('login')}}">Log In</a></li>
+    <li><a href="{{route('register')}}">Register</a></li>
+    @if(!auth()->guest())
+    <li>
+        {!! Form::open(['url' => 'logout', 'method' => 'post', 'id' => 'logout']) !!}
+        <a onclick="$('#logout').submit();">Log Out</a>
+        {!! Form::close() !!}
+    </li>
+    @endif
+
 </ul>

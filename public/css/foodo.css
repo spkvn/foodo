@@ -6880,6 +6880,10 @@ a.thumbnail image {
   width: calc(100% - 15rem);
 }
 
+li {
+  text-align: center;
+}
+
 .background__div {
   background-color: #19323C;
   top: 1.875rem;

@@ -7,6 +7,9 @@
         <a onclick="$('#logout').submit();">Log Out</a>
         {!! Form::close() !!}
     </li>
+    <li><a href="{{route('recipe.index')}}">Your Recipes</a></li>
+    @else
+
     @endif
 
 </ul>

@@ -7,7 +7,6 @@
             <a href="{{route("$base.create")}}">Create a Recipe</a>
         </div>
     </div>
-    <p><button class="button" data-open="exampleModal1">Click me for a modal</button></p>
     <div class="row">
         @forelse($records as $recipe)
             <div class="columns large-12">
@@ -32,14 +31,5 @@
         @empty
             <p>You have no recipes</p>
         @endforelse
-    </div>
-
-    <div class="reveal" id="exampleModal1" data-reveal>
-        <h1>Awesome. I Have It.</h1>
-        <p class="lead">Your couch. It is mine.</p>
-        <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
-        <button class="close-button" data-close aria-label="Close modal" type="button">
-            <span aria-hidden="true">&times;</span>
-        </button>
     </div>
 @endsection

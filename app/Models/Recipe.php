@@ -14,4 +14,9 @@ class Recipe extends Model
     {
         return $this->belongsTo(User::class,'user_id');
     }
+
+    public function ingredients()
+    {
+        return $this->belongsToMany(Ingredient::class);
+    }
 }

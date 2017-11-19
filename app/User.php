@@ -2,6 +2,7 @@
 
 namespace Foodo;
 
+use Foodo\Models\Ingredient;
 use Foodo\Models\Recipe;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -31,5 +32,10 @@ class User extends Authenticatable
     public function recipes()
     {
         return $this->hasMany(Recipe::class);
+    }
+
+    public function ingredients()
+    {
+        return $this->hasMany(Ingredient::class);
     }
 }

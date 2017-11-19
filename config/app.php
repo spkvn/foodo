@@ -177,6 +177,7 @@ return [
         // Foodo\Providers\BroadcastServiceProvider::class,
         Foodo\Providers\EventServiceProvider::class,
         Foodo\Providers\RouteServiceProvider::class,
+        Foodo\Providers\HtmlMacroProvider::class
 
     ],
 

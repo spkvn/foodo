@@ -15,6 +15,7 @@ let mix = require('laravel-mix');
 //    .sass('resources/assets/sass/app.scss', 'public/css');
 
 mix.sass('resources/assets/sass/foodo.scss', 'public/css');
+mix.js('resources/assets/js/stop.js', 'public/js/stop.js');
 mix.combine([
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/foundation-sites/dist/js/foundation.min.js',

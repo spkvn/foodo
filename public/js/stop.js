@@ -111,8 +111,9 @@ $(function () {
 });
 
 /*AJAX Ingredient Search*/
-$("#ingredient__search").on("change keyup paste", function () {
+$("#ingredient__search").on("keyup paste", function () {
     $query = $(this).val();
+    $parent = $(".parent").attr('id');
     $.ajax({
         url: "/ingredient/search?query=" + encodeURIComponent($query),
         action: "GET",
@@ -122,7 +123,7 @@ $("#ingredient__search").on("change keyup paste", function () {
             if (obj.length > 0) {
                 console.log(obj);
                 $.each(obj, function (key, value) {
-                    $("#search__results").append($("<div class='column'>").load('/ingredient/' + value.id + "/quantityCard"));
+                    $("#search__results").append($("<div class='column'>").load('/recipe/' + $parent + '/ingredient/' + value.id + "/quantityCard"));
                 });
             } else {
                 $("#search__results").append('<h1>No Results</h1>');

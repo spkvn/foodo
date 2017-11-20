@@ -5,8 +5,7 @@
     <img src="https://maxpull-tlu7l6lqiu.stackpathdns.com/wp-content/uploads/2017/05/zone-8-banana-400x267.jpg" alt="Placeholder">
     <div class="card-section">
         {{--route('recipe.ingredient.add')--}}
-        {{dd($parent)}}
-        {!! Form::open(['url' => 'placeholder' , 'method' => "POST"]) !!}
+        {!! Form::open(['url' => route('recipe.ingredient.add', ['recipe' =>$recipe->id, 'ingredient' => $ingredient->id]) , 'method' => "POST"]) !!}
         {!! Form::label('quantity', "Quantity: ") !!}
         {!! Form::number('quantity',null,['placeholder' => "$ingredient->name quantity"]) !!}
         {!! Form::label('unit', 'Unit of Measurement:') !!}

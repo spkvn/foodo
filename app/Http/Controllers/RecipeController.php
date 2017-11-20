@@ -3,8 +3,10 @@
 namespace Foodo\Http\Controllers;
 
 use Foodo\Http\Requests\RecipeRequest;
+use Foodo\Models\Ingredient;
 use Foodo\Services\RecipeService;
 use Foodo\Models\Recipe;
+use Illuminate\Http\Request;
 
 class RecipeController extends Controller
 {
@@ -67,5 +69,24 @@ class RecipeController extends Controller
             ->with("parent", $recipe)
             ->with("records", $ingredients)
             ->with("base", $this->base);
+    }
+
+    public function getQuantityCard(Recipe $recipe, Ingredient $ingredient)
+    {
+        return view("$this->base.ingredient.quantityCard")
+            ->with("recipe", $recipe)
+            ->with("ingredient",$ingredient);
+    }
+
+    public function addIngredients(Request $request, Recipe $recipe, Ingredient $ingredient)
+    {
+        $ingredient->recipes()->save($recipe, [
+            'quantity' => $request->quantity,
+            'unit' => $request->unit
+        ]);
+
+        return redirect()
+            ->route("$this->base.ingredient.list", ['recipe' => $recipe->id, 'ingredient' => $ingredient->id])
+            ->with('flashNotice', "$ingredient->name added");
     }
 }

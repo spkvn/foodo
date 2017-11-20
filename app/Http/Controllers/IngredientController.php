@@ -42,10 +42,4 @@ class IngredientController extends Controller
 
         return $ingredients;
     }
-
-    public function getQuantityCard(Ingredient $ingredient)
-    {
-        return view("$this->base.quantityCard")
-            ->with("ingredient",$ingredient);
-    }
 }

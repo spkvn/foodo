@@ -21,8 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get("recipe/{recipe}/ingredient/list", "RecipeController@listIngredients")->name("recipe.ingredient.list");
 Route::post("recipe/{recipe}/ingredient/{ingredient}", "RecipeController@addIngredients")->name("recipe.ingredient.add");
+Route::get('recipe/{recipe}/ingredient/{ingredient}/quantityCard', 'RecipeController@getQuantityCard')->name('recipe.ingredient.quantityCard');
 Route::resource('recipe', 'RecipeController');
 
 Route::get('ingredient/search', 'IngredientController@search')->name('ingredient.search');
-Route::get('ingredient/{ingredient}/quantityCard', 'IngredientController@getQuantityCard')->name('ingredient.quantityCard');
 Route::resource('ingredient', 'IngredientController');

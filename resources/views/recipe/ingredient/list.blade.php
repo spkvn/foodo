@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="columns large-12">
-            <h1>{{$parent->name}}'s Ingredients</h1>
+            <h1 class="parent" id="{{$parent->id}}">{{$parent->name}}'s Ingredients</h1>
             <p>This recipe has {{$parent->ingredients()->count()}} Ingredients</p>
         </div>
     </div>

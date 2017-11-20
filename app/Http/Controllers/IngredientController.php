@@ -3,7 +3,9 @@
 namespace Foodo\Http\Controllers;
 
 use Foodo\Models\Ingredient;
+use Foodo\Services\IngredientService;
 use Illuminate\Http\Request;
+use Foodo\Http\Requests\IngredientRequest;
 
 class IngredientController extends Controller
 {
@@ -25,15 +27,25 @@ class IngredientController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(IngredientRequest $request)
     {
-        $ingredient = Ingredient::create([
-            'name' => $request->name,
-            'user_id' => auth()->user()->id
-        ]);
+        $ingredient = IngredientService::save($request);
 
         return redirect()
             ->route("$this->base.index")
             ->with('flashNotice', "$ingredient->name Created");
+    }
+
+    public function search(Request $request)
+    {
+        $ingredients = IngredientService::search((string)$request->input('query'));
+
+        return $ingredients;
+    }
+
+    public function getQuantityCard(Ingredient $ingredient)
+    {
+        return view("$this->base.quantityCard")
+            ->with("ingredient",$ingredient);
     }
 }

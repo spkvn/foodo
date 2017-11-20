@@ -19,6 +19,7 @@
                     <div class="card-section">
                         <p>This ingredient has been used in {{$ingredient->recipes->count()}} recipes.</p>
                         <a href="{{route("$base.edit",$ingredient->id)}}">Edit</a>
+                        <!--ToDo: Need to ajax search the ingredients table, time for some JS lol -->
                         <a href="">Images</a>
                     </div>
                 </div>

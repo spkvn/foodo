@@ -58,4 +58,14 @@ class RecipeController extends Controller
             ->route("$this->base.index")
             ->with('flashNotice', "Recipe Deleted");
     }
+
+    public function listIngredients(Recipe $recipe)
+    {
+        $ingredients = $recipe->ingredients;
+
+        return view("$this->base.ingredient.list")
+            ->with("parent", $recipe)
+            ->with("records", $ingredients)
+            ->with("base", $this->base);
+    }
 }

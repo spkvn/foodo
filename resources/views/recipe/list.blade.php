@@ -21,7 +21,7 @@
                         {{--<a href="" class="button">Delete</a>--}}
                         <a href="" class="button">Image</a>
                         <a href="" class="button">Steps</a>
-                        <a href="" class="button">Ingredients</a>
+                        <a href="{{ route("$base.ingredient.list",$recipe->id) }}" class="button">Ingredients</a>
                     </div>
                 </div>
                 <div class="columns large-2">
